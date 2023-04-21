@@ -34,4 +34,12 @@ print(s)
 print(list(s))
 
 say = set('Hello')
-print(say) #{'l', 'o', 'H', 'e'}
+print(say) #{'l', 'o', 'H', 'e'} - 순서 없고, 중복 없음
+
+#1에서 10까지의 자연수를 저장
+C = { x for x in range(1, 11)}
+print(C)
+
+#1에서 20까지의 자연수 중에서 3의 배수 저장
+D= { x for x in range(1, 21) if x % 3 == 0}
+print(D)
