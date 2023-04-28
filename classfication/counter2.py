@@ -5,10 +5,10 @@
 # 외부에서는 함수에 접근
 
 class Counter:
-    x = 0    # 클래스 변수
 
     def __init__(self):
-        Counter.x += 1  # 클래스 변수이므로 클래스로 직접 접근
+        self.x = 0     # 인스턴스 변수
+        self.x += 1
 
     def get_count(self):
         return self.x
