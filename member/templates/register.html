@@ -10,6 +10,9 @@
 <body>
     <div id="container">
         {% include 'header.html' %}
+        <div id="main-pic">
+            <img src="{{ url_for('static', filename='images/header1.jpg') }}">
+        </div>
         <section id="register">
             <h2>회원 가입</h2>
             <form action="{{ url_for('register') }}" method="post"

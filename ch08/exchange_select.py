@@ -23,4 +23,4 @@ all_li = ul.select('ul.data_lst li')
 for li in all_li:
     exchange = li.select_one('span.blind')
     value = li.select_one('span.value')
-    print(exchange.string.split(' ')[-1], ':', value.string)
+    print(exchange.string.split(' ')[0], ':', value.string)

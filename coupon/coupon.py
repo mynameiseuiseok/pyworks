@@ -7,6 +7,7 @@ namelist = ['고요한', '임상협', '오스마르', '기성용', '일류첸코
             '황현수', '나상호', '한승규', '박수일', '한찬희',
             '김진야', '김주성', '김신진', '이한범', '이태석']
 
+
 # 5명 랜덤 추출
 def click():
     winner = []
@@ -17,30 +18,31 @@ def click():
         name = random.choice(namelist)
         if name not in winner: # 중복 제거
             winner.append(name) # winner에 추가
-            
+
     output.delete(0,0, END)
     # output.insert(END, winner) # str로 출력 요망
     for i in winner:
         output.insert(END, i)
-        
+
     # 구현 2. randint() 사용
     '''
     while len(winner) < 5:
         idx = random.randint(0, 19)
         if idx not in winner:
             winner.append(idx)
-        
+
     # 출력
     output.delete(0.0, END)
     for i in winner:
         output.insert(END, namelist[i] + ' ')
+
 
 window = Tk()
 window.title("쿠폰 추첨기")
 window.option_add('*Font', '맑은고딕 14')
 
 # 이미지 넣기 - photoImage(file)
-img = PhotoImage(file = 'bronx.png')
+img = PhotoImage(file='bronx.png')
 
 lbl_img = Label(window)
 lbl_img.config(image=img)
