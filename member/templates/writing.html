@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>게시판 목록입니다.</title>
+    <title>글쓰기 폼</title>
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
 </head>
@@ -12,26 +12,9 @@
         <div id="main-pic">
             <img src="{{ url_for('static', filename='images/header1.jpg') }}" alt="배경 사진" id="pic">
         </div>
-        <section id="boardlist">
-            <h2>게시판 목록</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>글번호</th><th>글제목</th><th>작성일</th><th>조회수</th><th>글쓴이</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for board in boardlist %}
-                    <tr>
-                        <td>{{ board[0] }}</td>
-                        <td><a href="">{{ board[1] }}</a></td>
-                        <td>{{ board[3] }}</td>
-                        <td>{{ board[4] }}</td>
-                        <td>{{ board[5] }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+        <section id="writing">
+            <h2>글쓰기</h2>
+
         </section>
         {% include 'footer.html' %}
     </div>
