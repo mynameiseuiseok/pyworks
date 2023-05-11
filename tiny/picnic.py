@@ -6,12 +6,13 @@ def get_args():
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
 
-    # 명령행 인수 : -n(축약형), --name
+    # 아이템을 여러개 전달
     parser.add_argument('item',
                         metavar='str',
                         nargs='+',      # 인수를 1개 이상 전달함
                         help='Item(s) to bring')
 
+    # -s, --sorted를 사용하면 정렬 기능을 사용
     parser.add_argument('-s',
                         '--sorted',
                         action='store_true',
@@ -33,12 +34,12 @@ def main():
     if num == 1:    # 명령행의 인수가 1개이면
         bringing = items[0]     # bringing 변수에 1개 저장
     elif num == 2:
-        bringing = ' and '.join(items)
+        bringing = 'and '.join(items)
     else:
-        items[-1] = ' and ' + items[-1]
+        items[-1] = 'and ' + items[-1]
         bringing = ', '.join(items)
 
-    print('You are bringing {}'.format(bringing))
+    print('You are bringing {}.'.format(bringing))
 
 if __name__=="__main__":
     main()
