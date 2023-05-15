@@ -12,7 +12,6 @@ for i in range(0, n):
             temp = a[j]
             a[j] = a[j+1]
             a[j+1] = temp
-
 '''
 i=0(1행) j=0 a[0] > a[1] True  5, 60, 33, 12, 97, 24
          j=1 a[1] > a[2] True  5, 33, 60, 12, 97, 24
@@ -27,10 +26,10 @@ i=1(2행) j=1 a[1] > a[2] False 5, 33, 12, 60, 24, 97
 
 print(a)
 
-'''
+"""
 a.reverse() # 거꾸로 배치
 print(a)
 
 a.sort(reverse=True) # 내림차순
 print(a)
-'''
+"""

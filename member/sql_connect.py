@@ -16,6 +16,7 @@ def create_board():
           title  TEXT NOT NULL,
           content TEXT NOT NULL,
           createdate DATETIME DEFAULT (datetime('now', 'localtime')),
+          modifydate DATETIME,
           hit INTEGER DEFAULT 0,
           memberid TEXT NOT NULL,
           FOREIGN KEY(memberid) REFERENCES member(memberid) ON DELETE CASCADE
