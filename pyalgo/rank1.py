@@ -1,6 +1,7 @@
 # 순위 정하기
 score = [60, 5, 33, 12, 97, 24]
-rank = [1, 1, 1, 1, 1, 1]
+# rank = [1, 1, 1, 1, 1, 1]
+rank = [0, 0, 0, 0, 0, 0]
 n = len(score)
 print(n)
 
@@ -9,6 +10,8 @@ for i in range(0, n):
     for j in range(0, n):
         if score[i] < score[j]:
             rank[i] += 1   # 순위 1 증가(순위가 밀림)
+
+print(rank)
 
 '''
     i=0 j=0 score[0] < score[0] False rank[0] = 1
