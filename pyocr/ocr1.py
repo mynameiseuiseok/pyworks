@@ -5,8 +5,8 @@ from pytesseract import pytesseract
 # 엔진
 pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract.exe"
 
-img = Image.open("source/news2.PNG")
 # img = Image.open("source/news2.jpg")
+img = Image.open("source/news2.PNG")
 # img.show()
 text = pytesseract.image_to_string(img, lang='kor+eng')
 # print(text)
